@@ -1,7 +1,7 @@
-import Image from "next/image";
-import image from '../public/image1.jpg';
-import familyImage from '../public/families.jpg';
 import LinearChart from "@/Components/LineChart";
+import Image from "next/image";
+import familyImage from '../public/families.jpg';
+import image from '../public/image1.jpg';
 export default function Home() {
   return (
 
@@ -38,10 +38,7 @@ export default function Home() {
             alt="" />
         </div>
         <p className="mt-4 p-2 bg-white rounded-2xl shadow-lg text-sm text-center font-semibold md:text-2xl underline decoration-[#FFC94A] decoration-[1.5px] md:leading-relaxed md:w-[50vw]">
-
-          &quot We are a team of dedicated professionals who are passionate about delivering exceptional patient care. Our team is
-          comprised of experienced Doctors, Nurses, and Support staff who work together to provide personalized attention
-          and care to you and your Family.&quot
+          We are a team of Doctors, Nurses, and Support staff who are passionate about delivering exceptional patient care and who work together to provide personalized attention and care to you and your Family.
         </p>
       </section>
 
