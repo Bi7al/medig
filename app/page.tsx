@@ -3,7 +3,7 @@ import image from '../public/image1.jpg'
 export default function Home() {
   return (
 
-    <section className="p-8 md:p-8 md:h-screen   flex justify-center items-center">
+    <section className="p-2 md:p-8 md:h-screen   flex justify-center items-center">
       <div className="md:h-[99vh] md:w-[99vw]  rounded-3xl overflow-hidden relative ">
         <Image src={image}
           alt=""
