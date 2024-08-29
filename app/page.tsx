@@ -38,9 +38,10 @@ export default function Home() {
             alt="" />
         </div>
         <p className="mt-4 p-2 bg-white rounded-2xl shadow-lg text-sm text-center font-semibold md:text-2xl underline decoration-[#FFC94A] decoration-[1.5px] md:leading-relaxed md:w-[50vw]">
-          " We are a team of dedicated professionals who are passionate about delivering exceptional patient care. Our team is
+
+          &quot We are a team of dedicated professionals who are passionate about delivering exceptional patient care. Our team is
           comprised of experienced Doctors, Nurses, and Support staff who work together to provide personalized attention
-          and care to you and your Family."
+          and care to you and your Family.&quot
         </p>
       </section>
 
