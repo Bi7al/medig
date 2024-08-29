@@ -11,7 +11,7 @@ function Navbar() {
 
             <div className={mobileResponsive ? 'absolute h-fit top-16 left-0  py-11 border-t-2  w-full  bg-white ' : "hidden md:static"}>
                 <ul className='flex flex-col justify-center items-center ps-4 gap-3 md:flex-row md:gap-8 text-[#2066a2]'>
-                    <Link href='/panel' onClick={() => setMobileResonsive(!mobileResponsive)}>
+                    <Link href='/doctorspanel' onClick={() => setMobileResonsive(!mobileResponsive)}>
                         <li className='uppercase font-semibold hover:underline hover:transition  ease-in delay-100 hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>doctors</li>
                     </Link>
                     <Link href='/schedule' onClick={() => setMobileResonsive(!mobileResponsive)}>
@@ -22,7 +22,7 @@ function Navbar() {
                     </Link>
                 </ul>
             </div>
-            <button className='md:hidden' onClick={() => setMobileResonsive(!mobileResponsive)}>Toggle</button>
+            <button className='md:hidden ' type='button' onClick={() => setMobileResonsive(!mobileResponsive)}>Toggle</button>
         </nav>
     )
 }
