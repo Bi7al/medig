@@ -22,7 +22,7 @@ export default function RootLayout({
         <header className="h-16   w-full ">
           <Navbar />
         </header>
-        <main className="min-h-screen">{children}</main>
+        {children}
         <footer className="h-60  border-t-2"></footer>
       </body>
     </html>
