@@ -32,12 +32,12 @@ export default function Home() {
       <section className="mx-auto  h-fit w-[95vw]   py-4  flex   items-center flex-col text-[#074173]">
         <h1 className="font-extrabold text-3xl  ">Who are We ?</h1>
         <hr className="w-[90%] shadow-2xl" />
-        <div className=" w-[95vw] md:w-[70vw] md:h-[45vh] rounded-[3rem] shadow-2xl overflow-hidden flex justify-center items-center mt-4 ">
+        <div className=" w-[95vw] md:w-[70vw] md:h-[45vh] rounded-[1.5rem] shadow-2xl overflow-hidden flex justify-center items-center mt-4 ">
           <Image
             src={familyImage}
             alt="" />
         </div>
-        <p className="mt-4 p-2 bg-white rounded-2xl shadow-lg text-sm text-center font-semibold md:text-2xl underline decoration-[#FFC94A] decoration-[1.5px] md:leading-relaxed md:w-[50vw]">
+        <p className="mt-4 p-2 bg-white rounded-2xl shadow-lg text-xl text-center font-semibold md:text-2xl underline decoration-[#FFC94A] decoration-[1.5px] md:leading-relaxed md:w-[50vw]">
           We are a team of Doctors, Nurses, and Support staff who are passionate about delivering exceptional patient care and who work together to provide personalized attention and care to you and your Family.
         </p>
       </section>
