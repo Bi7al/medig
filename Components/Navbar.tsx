@@ -1,7 +1,8 @@
 'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
-
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 function Navbar() {
     const [mobileResponsive, setMobileResonsive] = useState(false)
     return (
@@ -9,21 +10,35 @@ function Navbar() {
             <Link href='/'><h1 className='font-extrabold text-3xl md:text-5xl text-[#3fa2f6]'>medig+</h1></Link >
 
 
-            <div className={mobileResponsive ? 'absolute h-fit top-16 left-0  py-11 border-t-2  w-full  bg-white ' : "hidden md:static"}>
-                <ul className='flex flex-col justify-center items-center ps-4 gap-3 md:flex-row md:gap-8 text-[#2066a2]'>
-                    <Link href='/doctorspanel' onClick={() => setMobileResonsive(!mobileResponsive)}>
-                        <li className='uppercase font-semibold hover:underline hover:transition  ease-in delay-100 hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>doctors</li>
+            <div>
+                <ul className='hidden md:flex justify-center items-center ps-4 gap-8 text-[#2066a2]'>
+                    <Link href='/doctorspanel' >
+                        <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>doctors</li>
                     </Link>
-                    <Link href='/schedule' onClick={() => setMobileResonsive(!mobileResponsive)}>
-                        <li className='uppercase font-semibold hover:underline hover:transition  ease-in delay-100 hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>book appointment</li>
+                    <Link href='/schedule' >
+                        <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>book appointment</li>
                     </Link>
-                    <Link href='/pharmacy' onClick={() => setMobileResonsive(!mobileResponsive)}>
-                        <li className='uppercase font-semibold hover:underline hover:transition  ease-in delay-100 hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>meds</li>
+                    <Link href='/pharmacy' >
+                        <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>meds</li>
                     </Link>
                 </ul>
             </div>
-            <button className='md:hidden ' type='button' onClick={() => setMobileResonsive(!mobileResponsive)}>Toggle</button>
-        </nav>
+            <div className={mobileResponsive ? 'absolute bg-gray-300 h-[100vh] w-full top-16 left-0 md:hidden transition ease-in  shadow-2xl' : "absolute top-[-100vh] "}>
+                <ul className='flex flex-col justify-center border-t-2 bg-white items-center p-4 gap-8 text-[#2066a2]'>
+                    <Link href='/doctorspanel' onClick={() => setMobileResonsive(!mobileResponsive)}>
+                        <li className='uppercase font-semibold underline underline-offset-2  hover:underline-offset-8    decoration-[#FFC94A] hover:text-[#3FA2F6]'>doctors</li>
+                    </Link>
+                    <Link href='/schedule' onClick={() => setMobileResonsive(!mobileResponsive)}>
+                        <li className='uppercase font-semibold underline underline-offset-2  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>book appointment</li>
+                    </Link>
+                    <Link href='/pharmacy' onClick={() => setMobileResonsive(!mobileResponsive)}>
+                        <li className='uppercase font-semibold underline underline-offset-2  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>meds</li>
+                    </Link>
+                </ul>
+            </div>
+
+            <button className='md:hidden ' type='button' onClick={() => setMobileResonsive(!mobileResponsive)}>{mobileResponsive ? <CloseIcon /> : <MenuIcon />}</button>
+        </nav >
     )
 }
 
