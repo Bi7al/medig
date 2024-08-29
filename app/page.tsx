@@ -21,9 +21,10 @@ export default function Home() {
         </div>
       </section>
       <section className="p-4 md:p-8 bg-white mt-4 gap-4 flex flex-col md:flex-row items-center">
-        <p className="font-extrabold text-2xl md:text-5xl text-[#074173] leading-normal md:w-[45vw]">Built on Trust of our patients.<br />
+        <p className="font-extrabold text-2xl md:text-5xl text-[#074173] shadow-2xl p-4 rounded-2xl leading-normal md:w-[45vw] mb-8">Built on Trust of our patients.<br />
           Over 1500+ successful procedures, Serving Humanity With Our Best.
         </p>
+
         {/* Chart Component */}
         <LinearChart />
       </section>
