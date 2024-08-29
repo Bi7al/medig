@@ -1,5 +1,6 @@
 import Image from "next/image";
-import image from '../public/image1.jpg'
+import image from '../public/image1.jpg';
+import familyImage from '../public/families.jpg';
 import LinearChart from "@/Components/LineChart";
 export default function Home() {
   return (
@@ -20,13 +21,29 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="p-4 md:p-8 bg-white mt-4 gap-4 flex flex-col md:flex-row items-center">
-        <p className="font-extrabold text-2xl md:text-5xl text-[#074173] shadow-2xl p-4 rounded-2xl leading-normal md:w-[45vw] mb-8">Built on Trust of our patients.<br />
+      <section className="p-4 md:p-8 bg-white my-4 gap-4 flex flex-col md:flex-row items-center">
+        <p className="font-extrabold text-2xl md:text-5xl text-[#074173] shadow-2xl p-4 rounded-2xl leading-10 h-full md:w-[45vw] mb-8">Built on Trust of our patients.<br />
           Over 1500+ successful procedures, Serving Humanity With Our Best.
         </p>
 
         {/* Chart Component */}
         <LinearChart />
+      </section>
+      <section className="mx-auto  h-fit w-[95vw]   py-4  flex   items-center flex-col text-[#074173]">
+        <h1 className="font-extrabold text-3xl  ">Who are We ?</h1>
+        <hr className="w-[90%] shadow-2xl" />
+        <div className=" w-[95vw] md:w-[70vw] md:h-[45vh] rounded-[3rem] shadow-2xl overflow-hidden flex justify-center items-center mt-4 ">
+          <Image
+            src={familyImage}
+            alt="" />
+        </div>
+        <p className="mt-4 p-2 bg-white rounded-2xl shadow-lg text-sm text-center font-semibold md:text-2xl underline decoration-[#FFC94A] decoration-[1.5px] md:leading-relaxed md:w-[50vw]">
+          " We are a team of dedicated professionals who are passionate about delivering exceptional patient care. Our team is
+          comprised of experienced Doctors, Nurses, and Support staff who work together to provide personalized attention
+          and care to you and your Family."
+        </p>
+      </section>
+      <section className="w-[60vw]">
       </section>
     </main>
   );
