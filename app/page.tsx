@@ -43,8 +43,7 @@ export default function Home() {
           and care to you and your Family."
         </p>
       </section>
-      <section className="w-[60vw]">
-      </section>
+
     </main>
   );
 }
