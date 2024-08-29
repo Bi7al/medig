@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className}>
-        <header className="h-16  w-full ">
+        <header className="h-16   w-full ">
           <Navbar />
         </header>
-        <main className="min-h-screen container">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <footer className="h-60  border-t-2"></footer>
       </body>
     </html>
