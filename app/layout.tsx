@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Tinos } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
-
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "@/Components/Footer";
+const tinos = Tinos({
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={inter.className}>
-        <header className="h-16   w-full ">
+      <body className={tinos.className}>
+        <header className="h-[10vh]   w-full block">
           <Navbar />
         </header>
-        {children}
-        <footer className="h-60  border-t-2"></footer>
+        <main>{children}</main>
+        <footer >
+          <Footer />
+        </footer>
       </body>
     </html>
   );

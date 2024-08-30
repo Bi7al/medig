@@ -5,7 +5,7 @@ import image from '../public/image1.jpg';
 export default function Home() {
   return (
 
-    <main>
+    <>
       <section className="p-2 md:p-4 md:h-screen   flex justify-center shadow-xl ">
         <div className="md:h-[90vh] md:w-[99vw]  rounded-3xl overflow-hidden relative ">
           <Image src={image}
@@ -29,7 +29,7 @@ export default function Home() {
         {/* Chart Component */}
         <LinearChart />
       </section>
-      <section className="mx-auto  h-fit w-[95vw]   py-4  flex   items-center flex-col text-[#074173]">
+      <section className="mx-auto mb-8  h-fit w-[95vw]   py-4  flex   items-center flex-col text-[#074173]">
         <h1 className="font-extrabold text-3xl  ">Who are We ?</h1>
         <hr className="w-[90%] shadow-2xl" />
         <div className=" w-[95vw] md:w-[70vw] md:h-[45vh] rounded-[1.5rem] shadow-2xl overflow-hidden flex justify-center items-center mt-4 ">
@@ -42,6 +42,6 @@ export default function Home() {
         </p>
       </section>
 
-    </main>
+    </>
   );
 }

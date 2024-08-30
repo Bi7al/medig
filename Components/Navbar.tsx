@@ -6,12 +6,15 @@ import CloseIcon from '@mui/icons-material/Close';
 function Navbar() {
     const [mobileResponsive, setMobileResonsive] = useState<boolean>(false)
     return (
-        <nav className='w-full h-16 px-4 md:px-8 z-20 bg-white border-b-2 fixed flex justify-between items-center'>
+        <nav className='w-full h-[10vh] px-4  md:px-8 z-20 bg-white border-b-2 fixed flex justify-between items-center'>
             <Link href='/'><h1 className='font-extrabold text-3xl md:text-5xl text-[#3fa2f6]'>medig+</h1></Link >
 
 
             <div>
-                <ul className='hidden md:flex justify-center items-center ps-4 gap-8 text-[#2066a2]'>
+                <ul className='hidden md:flex justify-center items-center ps-4 me-8 gap-8 text-[#2066a2]'>
+                    <Link href='/' >
+                        <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>Home</li>
+                    </Link>
                     <Link href='/doctorspanel' >
                         <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>doctors</li>
                     </Link>
