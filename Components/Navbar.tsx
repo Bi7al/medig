@@ -12,16 +12,16 @@ function Navbar() {
 
             <div>
                 <ul className='hidden md:flex justify-center items-center ps-4 me-8 gap-8 text-[#2066a2]'>
-                    <Link href='/' >
-                        <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>Home</li>
+                    <Link href='/' className='hover:scale-105 transition delay-75' >
+                        <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6] '>Home</li>
                     </Link>
-                    <Link href='/doctorspanel' >
+                    <Link href='/doctorspanel' className='hover:scale-105 transition delay-75' >
                         <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>doctors</li>
                     </Link>
-                    <Link href='/schedule' >
+                    <Link href='/schedule' className='hover:scale-105 transition delay-75' >
                         <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>book appointment</li>
                     </Link>
-                    <Link href='/pharmacy' >
+                    <Link href='/pharmacy' className='hover:scale-105 transition delay-75' >
                         <li className='uppercase font-semibold hover:underline  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>meds</li>
                     </Link>
                 </ul>
