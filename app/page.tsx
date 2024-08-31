@@ -15,6 +15,7 @@ export default function Home() {
             priority
             className="object-cover h-full w-full rounded-3xl"
             sizes="(max-width:768px)400w,1240w"
+
           />
           <div className="absolute top-[50%] left-[50%] h-[fit] md:h-auto  w-[90%] md:w-[60%] rounded-[.75rem] md:rounded-[1.5rem] p-4 bg-opacity-70 bg-black -translate-x-1/2 -translate-y-1/2">
             <div className="w-full h-full flex flex-col items-center  text-white font-semibold md:text-2xl">
