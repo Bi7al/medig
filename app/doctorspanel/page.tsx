@@ -76,7 +76,7 @@ function Doctors() {
     return (
         <section className='w-full bg-[#16325B] min-h-screen border-b-2 border-[#ffcf60] flex justify-center items-center flex-col py-8'>
             {/* Contains Information About Doctors */}
-            <h1 className='text-center font-bold text-5xl text-white underline'>Meet the Team</h1>
+            <h1 className='text-center font-bold text-2xl md:text-5xl text-white underline'>Meet the Team</h1>
             <Department departmentTitle='General' staff={general} />
             <Department departmentTitle='Cardiology' staff={Cardiology} />
             <Department departmentTitle='Dermatology' staff={Dermatology} />

@@ -22,7 +22,12 @@ function Department({ departmentTitle, staff }: Props) {
                             <Image className='w-1/2 md:w-1/6 h-4/5  rounded-lg'
 
                                 src={member.image}
-                                alt='Doctor Image Goes Here' />
+                                alt='Doctor Image Goes Here'
+                                sizes='(max-width:768px) 120w,95w'
+                                layout='intrinsic'
+                                quality={50}
+                            />
+
 
                             <div className='text-sm md:text-xl ms-4 h-3/5 text-slate-800'>
                                 <h1 className='font-sans font-bold text-xl md:text-3xl'>{member.name}</h1>
