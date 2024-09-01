@@ -6,7 +6,7 @@ import doctorImage3 from '@/public/DoctorImages/doctor3.jpg'
 import doctorImage4 from '@/public/DoctorImages/doctor4.jpg'
 import doctorImage5 from '@/public/DoctorImages/doctor5.jpg'
 import doctorImage6 from '@/public/DoctorImages/doctor6.jpg'
-import Department from '@/Components/Department';
+import Department from '@/Components/Doctors/Department';
 interface Doctor {
     image: StaticImageData,
     name: string,

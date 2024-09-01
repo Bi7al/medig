@@ -1,7 +1,7 @@
 "use client"
-import SearchBar from '@/Components/SearchBar';
+import SearchBar from '@/Components/Meds/SearchBar';
 import React, { useState } from 'react'
-import Modal from '@/Components/Modal';
+import Modal from '@/Components/Meds/Modal';
 import { motion } from 'framer-motion';
 interface Medicine {
     medId: number,

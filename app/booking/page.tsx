@@ -1,10 +1,21 @@
+"use client"
 import React from 'react';
+import { motion } from 'framer-motion';
 function AppointmentBooking() {
 
     return (
         <section className='h-[75vh] md:h-[90vh] w-[100vw]  flex justify-around items-center'>
 
-            <div className='shadow-[05px_05px_10px_0px_#] shadow-slate-400  w-[90vw] md:w-[40vw] rounded-3xl ' >
+            <motion.div
+                initial={{ x: -200 }}
+                animate={{ x: 0 }}
+                transition={{
+                    duration: 0.5,
+                    delay: 0.1,
+                    ease: "easeOut"
+                }}
+                className='shadow-[05px_05px_10px_0px_#] shadow-slate-400  w-[90vw] md:w-[40vw] rounded-3xl '
+            >
                 <h1 className='text-3xl font-extrabold text-black text-opacity-40 text-center underline decoration-1 underline-offset-4 mt-5'>Booking Form
                 </h1>
                 <form className='flex flex-col p-1 w-full  gap-5 md:h-[70vh] ps-6 '>
@@ -33,7 +44,7 @@ function AppointmentBooking() {
                     <button className='h-12 w-[8rem] rounded-full text-white font-bold text-xl  border bg-[#ffcf60]'>Request</button>
                 </form>
 
-            </div>
+            </motion.div>
             <p className='hidden md:block h-[75vh] w-[35vw] font-extrabold my-auto text-5xl font-sans text-black text-opacity-30 pt-8'>
                 Get the Best possible treatment with  Our team of expert professionals, providing top-notch care and personalized attention.
             </p>
