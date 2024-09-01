@@ -23,10 +23,15 @@ export default function RootLayout({
 
       <body className={tinos.className}>
         <header className="h-[10vh]   w-full block">
+          {/* Contains Fixed NavBar Component only */}
           <Navbar />
         </header>
-        <main>{children}</main>
+        <main>
+          {/* All the Pages are Rendered Here  */}
+          {children}
+        </main>
         <footer >
+          {/* Contains Footer Component only */}
           <Footer />
         </footer>
       </body>

@@ -1,22 +1,21 @@
 'use client'
 import { motion } from 'framer-motion';
-
-
 import React from 'react'
 import Image from "next/image";
 import image from '@/public/image1.jpg';
 import Link from 'next/link';
-import { duration } from '@mui/material';
 
 
 function SectionTop() {
+    // The Top Component From the HomePage Animated Using Framer_Motion Library
     return (
         <section className="p-2 md:p-4 md:h-screen   flex justify-center shadow-xl ">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                    duration: .5
+                    duration: .5,
+                    delay: .1
                 }}
                 className="md:h-[90vh] md:w-[99vw]    relative ">
                 <Image src={image}
@@ -31,7 +30,7 @@ function SectionTop() {
 
 
                 />
-                <div
+                <div //Placed in Center of the Hospital Image
 
                     className="absolute top-[50%] left-[50%] h-[fit] md:h-auto  w-[90%] md:w-[60%] rounded-[.75rem] md:rounded-[1.5rem] p-4 bg-opacity-70 bg-black -translate-x-1/2 -translate-y-1/2">
                     <div className="w-full h-full flex flex-col items-center  text-white font-semibold md:text-2xl">

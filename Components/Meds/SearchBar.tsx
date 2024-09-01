@@ -13,13 +13,14 @@ interface Props {
     data: Medicine[]
 }
 function SearchBar({ data }: Props) {
-    const [searchval, setSearchValue] = useState<string>("")
+    // Recieves an Array of Data to Perform Search On.
+    const [searchval, setSearchValue] = useState<string>("") // Gets the Value from Input from the Search Bar
 
-    function handleChange(event: SyntheticEvent) {
+    function handleChange(event: SyntheticEvent) { // Handles The Change of Search Input and Updates searchVal State
         const target: HTMLInputElement = event.currentTarget as HTMLInputElement;
         setSearchValue(target.value)
     }
-    function handleClick(id: number) {
+    function handleClick(id: number) { // Sets searchVal State equal to the Clicked Med's Name
         const selectedMed: Medicine | undefined = data.find((med) => med.medId == id);
         if (selectedMed != undefined) {
             setSearchValue(selectedMed.name);
@@ -28,7 +29,7 @@ function SearchBar({ data }: Props) {
     }
 
     return (
-        <motion.div
+        <motion.div // Slightly Animated Using Framer Motion
             className='h-fit relative text-black'
             initial={{
                 opacity: 0,
@@ -44,6 +45,7 @@ function SearchBar({ data }: Props) {
             }}
         >
             <div className='flex justify-center items-center h-[45px] w-[250px] md:w-[400px]   rounded-2xl bg-white  overflow-hidden' >
+                {/* The Main Search Bar */}
                 <input type="text" placeholder='Search a Medicine' value={searchval} onChange={handleChange} className='h-full w-[85%] p-4 border-e-2 outline-none' />
 
                 <button className='h-full w-[15%] flex justify-center items-center active:scale-95'>
@@ -51,15 +53,18 @@ function SearchBar({ data }: Props) {
                 </button>
 
             </div>
+            {/* Renders the DropDown Component Containg Search Suggestions */}
             {
                 searchval && < div className=' w-[250px] md:w-[400px] z-50 absolute top-12 rounded-lg  bg-white ps-2 '>
                     {
                         data.filter((med: Medicine) => {
+                            // Gets the searchVal converts it to lowerCase and does same to every med's name in data array and renders the top 5 results as suggestions
                             const searchTerm: string = searchval.toLowerCase();
                             const medName: string = med.name.toLowerCase();
                             return searchTerm === medName ? false : medName.startsWith(searchTerm)
                         }).slice(0, 5).map((med => {
                             return (
+                                // Seperate Row for Every Suggestion
                                 <div key={med.medId} className='border-b-2 hover:border-b-4 p-2 hover:cursor-pointer' onClick={() => handleClick(med.medId)}>{med.name}</div>
                             )
                         }))

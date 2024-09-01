@@ -4,7 +4,20 @@ import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { motion } from 'framer-motion';
+
+/**
+ * A responsive navigation bar component.
+ *
+ * The Navbar component is designed to be used as a top-level navigation element.
+ * It includes links to the main pages of the application and a mobile-responsive
+ * menu that can be toggled on and off.
+ */
+
+
+
+
 function Navbar() {
+
     const [mobileResponsive, setMobileResonsive] = useState<boolean>(false)
     return (
 
@@ -28,7 +41,7 @@ function Navbar() {
                     </Link>
                 </ul>
             </div>
-            <motion.div
+            <motion.div // For Mobile Navigation Only Appears on Screens Below 768px. Animated Using Framer Motion Library
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
@@ -37,6 +50,7 @@ function Navbar() {
 
                 className={mobileResponsive ? 'fixed inset-0 top-[10vh] h-screen w-screen backdrop-blur' : "absolute top-[-100vh] "}>
                 <motion.ul
+                    // Contains Nav Links
                     initial={{
                         y: -200,
                         opacity: 0
@@ -65,10 +79,11 @@ function Navbar() {
             </motion.div>
 
             <motion.button
+
+                //Close Button And The Burger Menu Icon
                 initial={{ rotate: 0 }}
                 whileTap={{
                     rotate: 180,
-                    opacity: [1, 0, 1]
                 }}
                 transition={{
                     duration: 0.2,

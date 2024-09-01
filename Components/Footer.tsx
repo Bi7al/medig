@@ -1,5 +1,7 @@
 
 function Footer() {
+    /*Footer component for the application.
+    / Renders a footer with the application's logo, tagline, and copyright information.*/
     return (
 
         <div className='h-[15vh] md:h-[25vh] w-full bg-[#16325B] text-white flex justify-around items-center'>

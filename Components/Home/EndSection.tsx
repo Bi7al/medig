@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import familyImage from '@/public/families.jpg';
 function EndSection() {
+    // Conatins AN Image and the "Who We Are? Information"
     return (
         <section className="mx-auto mb-8  h-fit w-[95vw]   py-4  flex   items-center flex-col text-[#074173]">
             <h1 className="font-extrabold text-3xl  ">Who are We ?</h1>

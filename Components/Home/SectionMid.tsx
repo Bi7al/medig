@@ -2,6 +2,7 @@ import React from 'react'
 import LinearChart from "@/Components/Home/LineChart";
 
 function SectionMid() {
+    // Contains the The Textual Description an the Chart Component.
     return (
         <section className="p-4 md:p-8 bg-white my-4 gap-4 flex flex-col md:flex-row items-center">
             <p

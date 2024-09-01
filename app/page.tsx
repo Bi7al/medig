@@ -7,10 +7,11 @@ export default function Home() {
   return (
 
     <>
-      <SectionTop />
-      <SectionMid />
-      <EndSection />
-      <CardContainer />
+
+      <SectionTop /> {/*Contains Top Image Component*/}
+      <SectionMid /> {/*Contains The LineChart Component*/}
+      <EndSection /> {/*Contains The  Component with The Who We Are ?  Information*/}
+      <CardContainer />{/*Contains the Department Cards Section*/}
     </>
   );
 }

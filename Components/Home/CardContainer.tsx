@@ -13,6 +13,8 @@ interface Card {
     description: string,
 }
 function CardContainer() {
+    // Receives Nothing in Props. Contains data for Every Card and Acts As A Container For All the Cards.
+
     const cards: Card[] = [
         {
             image: Cardio,
@@ -38,7 +40,7 @@ function CardContainer() {
         },
     ]
     return (
-        <motion.section
+        <motion.section    //Left-to-right Sliding Animation Added Through Framer_Motion Library
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
             transition={{

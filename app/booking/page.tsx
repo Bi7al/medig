@@ -7,7 +7,7 @@ function AppointmentBooking() {
         <section className='h-[75vh] md:h-[90vh] w-[100vw]  flex justify-around items-center'>
 
             <motion.div
-                initial={{ x: -200 }}
+                initial={{ x: -100 }}
                 animate={{ x: 0 }}
                 transition={{
                     duration: 0.5,
@@ -52,4 +52,4 @@ function AppointmentBooking() {
     )
 }
 
-export default AppointmentBooking
+export default AppointmentBooking;
