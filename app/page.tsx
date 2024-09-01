@@ -13,8 +13,13 @@ export default function Home() {
           <Image src={image}
             alt="Hospital Building"
             priority
+            height={660}
+            width={1030}
             className="object-cover h-full w-full rounded-3xl"
-            sizes="(max-width:768px)400w,1240w"
+            sizes="(max-width:768px)384w,1030w"
+            placeholder="blur"
+
+
 
           />
           <div className="absolute top-[50%] left-[50%] h-[fit] md:h-auto  w-[90%] md:w-[60%] rounded-[.75rem] md:rounded-[1.5rem] p-4 bg-opacity-70 bg-black -translate-x-1/2 -translate-y-1/2">
@@ -42,8 +47,12 @@ export default function Home() {
           <Image
             src={familyImage}
             alt="Families in a Park"
+            height={330}
+            width={760}
             className="object-cover h-full w-full rounded-3xl"
-            sizes="(max-width:768px)390w,900w"
+            sizes="(max-width:768px)390w,760w"
+            placeholder="blur"
+
           />
 
         </div>

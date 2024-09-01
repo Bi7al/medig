@@ -13,6 +13,10 @@ function Card({ image, alt, title, description }: Props) {
                 src={image}
                 alt={alt}
                 className='w-full h-[50%] rounded-lg'
+                placeholder="blur"
+                width={300}
+                height={161}
+                sizes='(max-width:768px) 297w,300w'
             />
             <h3 className=' w-full font-sans font-semibold text-lg md:text-2xl'>{title}</h3>
             <p className='w-full text-left  md:text-lg'>{description}</p>

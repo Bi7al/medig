@@ -23,9 +23,12 @@ function Department({ departmentTitle, staff }: Props) {
 
                                 src={member.image}
                                 alt='Doctor Image Goes Here'
-                                sizes='(max-width:768px) 120w,95w'
-                                layout='intrinsic'
+                                height={205}
+                                width={215}
+                                sizes='(max-width:768px) 120w,215w'
                                 quality={50}
+                                placeholder="blur"
+
                             />
 
 
