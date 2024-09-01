@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={tinos.className}>
-        <header className="h-[10vh]   w-full block">
+        <header className="h-[10vh]  block">
           {/* Contains Fixed NavBar Component only */}
           <Navbar />
         </header>
