@@ -69,7 +69,7 @@ function Navbar() {
                     <Link href='/doctorspanel' onClick={() => setMobileResonsive(!mobileResponsive)}>
                         <li className='uppercase font-semibold underline underline-offset-2  hover:underline-offset-8    decoration-[#FFC94A] hover:text-[#3FA2F6]'>doctors</li>
                     </Link>
-                    <Link href='/schedule' onClick={() => setMobileResonsive(!mobileResponsive)}>
+                    <Link href='/booking' onClick={() => setMobileResonsive(!mobileResponsive)}>
                         <li className='uppercase font-semibold underline underline-offset-2  hover:underline-offset-8   decoration-[#FFC94A] hover:text-[#3FA2F6]'>book appointment</li>
                     </Link>
                     <Link href='/pharmacy' onClick={() => setMobileResonsive(!mobileResponsive)}>
