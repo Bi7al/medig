@@ -21,7 +21,7 @@ function Navbar() {
     const [mobileResponsive, setMobileResonsive] = useState<boolean>(false)
     return (
 
-        <nav className='w-full h-[10vh] px-4  md:px-8 z-20 bg-white border-b-2 fixed flex justify-between items-center'>
+        <nav className='w-full h-[10vh] px-4  md:px-8 z-20 bg-white border-b-2 fixed top-0 flex justify-between items-center'>
             <Link href='/'><h1 className='font-extrabold text-3xl md:text-5xl text-[#3fa2f6]'>medig+</h1></Link >
 
 
