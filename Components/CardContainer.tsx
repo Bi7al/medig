@@ -1,8 +1,9 @@
+"use client"
 import React from 'react';
 import Cardio from '@/public/heart.jpg';
 import Nuero from '@/public/Nuero.jpg';
 import Derma from '@/public/Derma.jpg';
-
+import { motion } from 'framer-motion';
 import { StaticImageData } from 'next/image';
 import Card from './Card';
 interface Card {
@@ -37,7 +38,14 @@ function CardContainer() {
         },
     ]
     return (
-        <section className='w-full md:w-[95vw] flex justify-around my-4 flex-col md:flex-row'>
+        <motion.section
+            initial={{ x: -100 }}
+            whileInView={{ x: 0 }}
+            transition={{
+                duration: 1,
+                ease: "easeInOut"
+            }}
+            className='w-full md:w-[95vw] flex justify-around my-4 flex-col md:flex-row'>
             {
                 cards.map((card, index) => {
                     return (
@@ -45,7 +53,7 @@ function CardContainer() {
                     )
                 })
             }
-        </section >
+        </motion.section >
     )
 }
 

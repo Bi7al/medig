@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
-import { LineChart, LinePlot, ResponsiveChartContainer } from '@mui/x-charts';
+import { motion } from 'framer-motion';
+import { LineChart } from '@mui/x-charts';
 interface ChartData {
     data: number[];
     label: string;
@@ -22,12 +23,23 @@ function LinearChart() {
     return (
 
 
-        <div className='h-[35vh] md:h-[50vh] w-[100vw] md:w-[45vw]'>
+        <motion.div
+            className='h-[35vh] md:h-[50vh] w-[100vw] md:w-[45vw]'
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={
+                {
+                    duration: .3,
+                    ease: "easeOut"
+
+                }
+            }
+        >
             <LineChart
                 series={chartData}
                 xAxis={axisData}
             />
-        </div>
+        </motion.div>
     )
 }
 

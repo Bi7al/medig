@@ -1,4 +1,6 @@
-import { Close } from '@mui/icons-material'
+'use client'
+import { Close } from '@mui/icons-material';
+import { motion } from 'framer-motion';
 import React, { MouseEventHandler, SyntheticEvent, useState } from 'react';
 interface Medicine {
     medId: number,
@@ -31,7 +33,23 @@ function Modal({ modalOpen, selectedMed, closeModal }: Props) {
 
     }
     return (
-        <div className={modalOpen ? 'fixed inset-0   backdrop-blur-sm flex justify-center items-center text-black ' : "hidden"}>
+        <motion.div
+            className={modalOpen ? 'fixed inset-0   backdrop-blur-sm flex justify-center items-center text-black ' : "hidden"}
+            initial={{
+                opacity: 0,
+                scale: 0
+            }}
+            whileInView={{
+                scale: 1,
+                opacity: 1
+            }}
+            transition={
+                {
+                    duration: .2,
+                    ease: "easeOut"
+                }
+            }
+        >
             <div className='w-[90vw] md:w-[40vw] h-[60vh] bg-white flex flex-col justify-between pb-2'>
                 <div className='w-full  flex justify-between '>
                     <h1 className='p-2 text-2xl'>{selectedMed?.name}</h1>
@@ -55,7 +73,7 @@ function Modal({ modalOpen, selectedMed, closeModal }: Props) {
                 </form>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

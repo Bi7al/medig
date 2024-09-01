@@ -1,6 +1,8 @@
 "use client"
 import React, { SyntheticEvent, useState } from 'react'
 import { Search } from '@mui/icons-material';
+import { motion } from 'framer-motion';
+
 interface Medicine {
     medId: number,
     name: string,
@@ -26,7 +28,21 @@ function SearchBar({ data }: Props) {
     }
 
     return (
-        <div className='h-fit relative text-black'>
+        <motion.div
+            className='h-fit relative text-black'
+            initial={{
+                opacity: 0,
+                y: -100
+            }}
+            animate={{
+                opacity: 1,
+                y: 0
+
+            }}
+            transition={{
+                duration: 0.5
+            }}
+        >
             <div className='flex justify-center items-center h-[45px] w-[250px] md:w-[400px]   rounded-2xl bg-white  overflow-hidden' >
                 <input type="text" placeholder='Search a Medicine' value={searchval} onChange={handleChange} className='h-full w-[85%] p-4 border-e-2 outline-none' />
 
@@ -50,7 +66,7 @@ function SearchBar({ data }: Props) {
                     }
                 </div>
             }
-        </div >
+        </motion.div >
     )
 }
 

@@ -2,6 +2,7 @@
 import SearchBar from '@/Components/SearchBar';
 import React, { useState } from 'react'
 import Modal from '@/Components/Modal';
+import { motion } from 'framer-motion';
 interface Medicine {
     medId: number,
     name: string,
@@ -62,7 +63,21 @@ function Pharmacy() {
     return (
         <section className='min-h-screen  flex flex-col justify-center md:justify-evenly gap-[10vh] md:gap-0 items-center text-white font-sans font-bold bg-[#6EACDA]'>
             <SearchBar data={MedicineCatalogue} />
-            <table className='border-2 w-[90vw] '>
+            <motion.table
+                className='border-2 w-[90vw] '
+                initial={{
+                    opacity: 0,
+                    y: -100
+                }}
+                animate={{
+                    opacity: 1,
+                    y: 0
+
+                }}
+                transition={{
+                    duration: 0.5
+                }}
+            >
                 <thead>
                     <tr className='border-2  w-full'>
                         <th>ID</th>
@@ -87,7 +102,7 @@ function Pharmacy() {
                         })
                     }
                 </tbody>
-            </table>
+            </motion.table>
             {/*Modal Element  */}
             <Modal modalOpen={modalOpen} closeModal={closeModal} selectedMed={selectedMed} />
 
